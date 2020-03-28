@@ -1,0 +1,64 @@
+;;============================================================================;;
+;; How to Design Programs, 2ª edição                                          ;;
+;; https://htdp.org/                                                          ;;
+;;----------------------------------------------------------------------------;;
+;; Capítulo 02: Functions and Programs                                        ;;
+;;----------------------------------------------------------------------------;;
+;; Resumo por: Abrantes Araújo Silva Filho                                    ;;
+;;             abrantesasf@gmail.com                                          ;;
+;;============================================================================;;
+
+
+2.1) Funções e variáveis:
+-------------------------
+Grosso modo, programas são funções:
+   a) cujo input são dados diversos (números, imagens, booleans, strings, etc.)
+   b) que são "disparadas" por eventos do mundo real
+   c) cujo output afetam o mundo real
+
+Uma função determina uma nova operação nos dados, e cada função pode ter 0, um
+ou mais inputs (argumentos ou parâmetros) que serão "consumidos" pela função.
+
+Variáveis ou constantes não são dados, elas representam dados.
+
+Definição de funções em BSL:
+   (define nome
+     (lambda (parametros)
+       (corpo)))
+
+Definição de constantes em BSL:
+   (define nome expressao)
+
+
+2.2) Como as funções são calculadas:
+------------------------------------
+É necessário saber como uma função é calculada após sua aplicação, para poder
+descobrir o que deu errado quando alguma coisa der errado (e elas darão errado
+com certeza em algum momento).
+
+A função é avaliada de acordo com as normas de avaliação da Lisp: primeiro
+resolve os argumentos recursivamente e, depois, passa para a função.
+
+Use o STEPPER da DrRacket para visualizar como as funções são calculadas!
+
+
+2.3) Composição de funções:
+---------------------------
+Tipicamente um programa não é composto apenas por uma única função mas, sim, por
+uma composição de funções diferentes. Em geral temos uma função PRINCIPAL e uma
+ou mais funções AUXILIARES ("helpers"). Isso facilita o entendimento e a
+manutenção posterior de um programa.
+
+Uma regra importante é: DEFINA 1 FUNÇÃO PARA CADA TAREFA!
+
+
+2.4) Constantes globais:
+------------------------
+O "nome" de uma constante é uma variável global, e sua criação é chamada de
+definição da constante. Elas introduzem nomes para todos os tipos de dados. Por
+convenção elas são escritas em LETRAS MAIÚSCULAS.
+
+Podem ser literais ou calculadas através de uma expressão.
+
+Uma regra importante é: PARA CADA CONSTANTE MENCIONADA EM UM PROBLEMA, INTRODUZA
+UMA DEFINIÇÃO DE CONSTANTE NO PROGRAMA (elimine os números mágicos)!
