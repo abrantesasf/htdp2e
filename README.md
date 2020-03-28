@@ -1,10 +1,12 @@
 # How to Design Programs (HTDP), 2ª ed
 
-Repositório para o estudo do livro **How to Design Programs: an introduction to
+Repositório para o estudo do livro **"How to Design Programs: an introduction to
 programming and computing"**, 2ª edição, de *Matthias Felleisen*, *Robert
 Bruce Findler*, *Matthew Flatt* e *Shriram Krishnamurthi*:
 
-![HTDP](https://github.com/abrantesasf/htdp2e/blob/master/imagens/htdp.jpg)
+<p align="center">
+  <img width="264" height="315" src="https://github.com/abrantesasf/htdp2e/blob/master/imagens/htdp_264x315.jpg">
+</p>
 
 O livro, conhecido por HTDP, está disponível online gratuitamente em
 [https://htdp.org/](https://htdp.org/), ou pode ser [adquirido na
