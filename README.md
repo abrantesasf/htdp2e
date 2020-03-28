@@ -2,3 +2,5 @@
 
 Repositório com códigos de estudo e materiais extras, gerados durante meu
 estudo do livro.
+
+Abrantes Araújo Silva Filho
