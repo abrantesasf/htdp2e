@@ -1,5 +1,5 @@
-# Created by https://www.gitignore.io/api/vim,tex,text,latex,elisp,emacs,racket,scheme,commonlisp
-# Edit at https://www.gitignore.io/?templates=vim,tex,text,latex,elisp,emacs,racket,scheme,commonlisp
+# Created by https://www.gitignore.io/api/vim,tex,latex,elisp,emacs,racket,scheme,commonlisp
+# Edit at https://www.gitignore.io/?templates=vim,tex,latex,elisp,emacs,racket,scheme,commonlisp
 
 ### CommonLisp ###
 *.FASL
@@ -500,16 +500,6 @@ compiled/
 ### TeX Patch ###
 # glossaries
 
-### Text ###
-*.doc
-*.docx
-*.msg
-*.pages
-*.rtf
-*.txt
-*.wpd
-*.wps
-
 ### Vim ###
 # Swap
 [._]*.s[a-v][a-z]
@@ -534,4 +524,4 @@ tags
 # Coc configuration directory
 .vim
 
-# End of https://www.gitignore.io/api/vim,tex,text,latex,elisp,emacs,racket,scheme,commonlisp
+# End of https://www.gitignore.io/api/vim,tex,latex,elisp,emacs,racket,scheme,commonlisp
