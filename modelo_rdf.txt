@@ -1,0 +1,28 @@
+;;============================================================================;;
+;; How to Design Programs, 2ª edição                                          ;;
+;; https://htdp.org/                                                          ;;
+;;----------------------------------------------------------------------------;;
+;; Capítulos: 1, 3.1, 3.2                                                     ;;
+;;----------------------------------------------------------------------------;;
+;; Resumo por: Abrantes Araújo Silva Filho                                    ;;
+;;             abrantesasf@gmail.com                                          ;;
+;;============================================================================;;
+
+
+;; Função: <nome da função>
+;; ========================
+;; <declaração de propósito - 2b>
+;; <assinatura - 2a>
+;;    Inputs: <definição de dados - 1: representação>
+;;    Output: <definição de dados - 1: interpretação>
+;; Exemplos funcionais: <3>
+;;     in: 
+;;    out: 
+;; Requisitos especiais:
+;;    <bibliotecas, etc.>
+<cabeçalho   - 2c>
+<template    - 4>
+<codificação - 5>
+
+;; Testes funcionais: <6>
+(funcao inputs)
