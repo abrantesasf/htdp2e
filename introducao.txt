@@ -21,10 +21,10 @@ Frase que resume o foco acima:
 O que é o DESIGN SISTEMÁTICO de programas? É o conjunto de 2 conceitos chaves:
 "receitas de design" e "refinamento iterativo".
 
-   - RECEITAS DE DESIGN
-      - Para funçoes individuais:
-         - 6 passos básicos: Receita de Design de Função (RDF)
-      - Para programas completos:
+   - RECEITAS DE DESIGN: RDF + RDP
+      - Para funçoes individuais: Receita de Design de Função (RDF)
+         - 6 passos básicos
+      - Para programas completos: Receita de Design de Programas (RDP)
          - GUI programs
          - Batch programs
 
@@ -58,45 +58,19 @@ Divisão do livro:
    - Parte VI    : acumuladores
 
 
---------------------------------------------------------------------------------
-             6 Passos básicos: Receita de Design de Função (RDF)
---------------------------------------------------------------------------------
-a) Defina 1 função para cada tarefa
-b) Elimine os números mágicos (Um programa, Várias definições): para cada
-   constante do problema, introduza uma definição de constante.
---------------------------------------------------------------------------------
-1) DA ANÁLISE DO PROBLEMA À DEFINIÇÃO DOS DADOS
-   -> Analise um problema, tipicamente escrito em palavras:
-        Identifique a informação que deve ser representada e como ela é
-        representada na linguagem de programação escolhida. Formule definições
-        de dados  e ilustre com exemplos.
+Mantenha os seguintes documentos impressos, sempre à mão:
 
-2) ASSINATURA, DECLARAÇÃO DE PROPÓSITO, CABEÇALHO
-   -> Extraia e expresse sua essência, de modo abstrato:
-        Declare que tipo de dados a função desejada consome e produz. Formule
-        uma resposta concisa para a questão: "a função calcula o quê?". Defina
-        um esboço para a assinatura.
+   - Receita de Design de Função (RDF):
+     (arquivo "receita_de_design_de_funcao_RDF.txt")
+     
+   - Modelo de Receita de Design de Função (modelo RDF):
+     (arquivo "modelo_rdf.txt"
 
-3) EXEMPLOS FUNCIONAIS:
-   -> Ilustre a essência com exemplos:
-        Trabalhe/defina exemplos que ilustram o propósito da função.
+   - Receita de Design de Programas (RDP):
+     (arquivo "receita_de_design_de_programas_RDP.txt")
 
-4) MODELO FUNCIONAL:
-   -> Estabeleça esboços e planos baseados na análise:
-        Traduza as definições de dados em um escoço da função.
-
-5) DEFINIÇÃO DA FUNÇÃO:
-   -> Termine a função e avalie os resultados esperados:
-        Preencha as lacunas no modelo da função. Explore a declaração do
-        propósito da função e os exemplos funcionais.
-
-6) TESTE:
-   -> Revise o produto à luz de checagens e testes que falharam:
-        Articule os exemplos como testes e garanta que a função passa em todos
-        eles. Descubra erros. Os testes complementam os exemplos e ajudam outros
-        a ler e entender a definição da função em caso de necessidade (e essa
-        necessidade sempre ocorre em qualquer programa).
---------------------------------------------------------------------------------
+   - Modelo de Receita de Designd e Programa (modelo RDP):
+     (arquivo "modelo_rdp.txt")
 
 Preparação:
 - Instale a versão mais nova da Racket:
