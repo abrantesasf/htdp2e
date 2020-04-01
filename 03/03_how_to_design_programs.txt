@@ -111,8 +111,9 @@ Ilustre a assinatura e a declaração de propósito. Prepare:
       funcionalidade esperada da função.
 
 4) FAÇA O INVENTÁRIO E CONSTRUA UM TEMPLATE:
-Faça um inventário para entender claramente quais são os inputs e o que a função
-precisa calcular. Prepare um template da função:
+Faça um inventário das coisas que são necessárias para construir a função, para
+entender claramente quais são os inputs e o que a função precisa calcular.
+Prepare um template da função:
 
    a) TEMPLATE: substitua o corpo da função no mockup já criado e introduza os
       parâmetros no corpo da função, com "..." para indicar que não é uma função
@@ -179,3 +180,78 @@ Basicamente são 3 tipos de conhecimentos de domínio:
 
 3.4) De Funções aos Programas:
 ------------------------------
+Em programas (batch ou interativos) que necessitem de muitas funções, mantenha
+uma "wish list" com as funções necessárias. Essa lista deve conter:
+   - nome da função
+   - assinatura da função
+   - declaração de propósito da função
+
+O programa termina (estará pronto) quando você codificar todas as funções da
+wish list (ela ficar vazia).
+
+
+3.5) Sobre os Testes:
+---------------------
+O teste das funções (e programas) é uma atividade extremamente trabalhosa, se
+for feito direito. Confiar em testes manuais é ERRADO pois, como é trabalhoso,
+logo os programadores deixam de fazer. O correto é que, PARA CADA FUNÇÃO, seja
+criado junto um TESTE UNITÁRIO dessa função, com os casos de testes
+funcionais. Esse teste unitário garantirá que alterações futuras da função não
+causem um erro lógico. A linguagem BSL e o DrRacket utilizam a função
+CHECK-EXPECT para testes unitários, por exemplo:
+   - (check-expect (funcao <input>) <output_esperado>)
+
+Para cada exemplo funcional, crie os testes unitários!
+
+
+3.6) Design de "World Programs":
+--------------------------------
+1) DEFINIÇÃO DE DADOS:
+Analise o problema, tipicamente escrito em palavras, e:
+
+   a) Identifique a INFORMAÇÃO sobre o mundo que deve ser representada, e defina
+      como ela será representada pelos DAODS da linguagem de programação
+      escolhida. Formula as DEFINIÇÕES DE DADOS que representam o ESTADO DO
+      MUNDO. Ex.:
+         ; Representação: o WordlState é um número
+         ; Interpretação: o número de pixels a partir da borda esquerda
+
+2) PROPRIEDADES CONSTANTES:
+Identifique as PROPRIEDADES DO MUNDO que permanecerão constantes durante o
+tempo,  e que serão necessárias para renderizar o mundo como uma imagem
+(requisito  da BSL). Crie CONSTANTES para cada propriedade, como um breve
+comentário  que explica o que essas constantes significam. Divida as constantes
+em  dois grupos:
+
+   a) CONSTANTES FÍSICAS: atributos gerais dos objetos no mundo
+
+   b) CONSTANTES GRÁFICAS: são as imagens dos objetos no mundo, criadas
+      utilizando-se as propriedades físicas.
+
+3) PROPRIEDADES QUE VARIAM NO TEMPO:
+Identifique as PROPRIEDADES DO MUNDO que são alteradas em reação aos EVENTOS que
+ocorrerão no mundo, e que se tornarão o ESTADO ATUAL do mundo. Desenvolva uma
+representação de dados para TODOS os possíveis estados do mundo, com suas
+respectivas definições de dados.
+
+4) DESIGN DAS FUNÇÕES NECESSÁRIAS:
+Depois que você tem todas as definições de dados (estados do mundo) prontas, é
+necessário fazer o design de diversas funções (e, para cada, use uma RDF):
+
+   a) RENDER: exibirá o estado atual do mundo ao usuário, com uma imagem.
+
+   b) EVENT HANDLERS: serão responsável por monitorar a ocorrência de eventos e
+      retornar o PRÓXIMO ESTADO do mundo. Os 3 principais event handlers são:
+         - clock-tick-handler
+         - keystroke-handler
+         - mouse-event-handler
+
+   c) END?: é a função responsável por decidir se o ESTADO ATUAL do mundo será
+      atualizado para o PRÓXIMO ESTADO e, em caso afirmativo, continuar a
+      execução do programa deixando o render exibir o estado atualizado.
+
+5) FUNÇÃO MAIN:
+Com todas as funções prontas, a única coisa que falta é a função MAIN, que
+executará o World Program através de uma expressão big-bang. O primeiro
+argumento, obrigatoriamente, é o ESTADO INICIAL do mundo; o resto dos argumentos
+(render, event handlers, end?) podem ocorrem em qualquer ordem.
