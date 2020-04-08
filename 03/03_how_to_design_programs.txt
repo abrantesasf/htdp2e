@@ -206,10 +206,16 @@ Para cada exemplo funcional, crie os testes unitários!
 
 3.6) Design de "World Programs":
 --------------------------------
+Da mesma forma que temos uma receita para o design de funções individuais, temos
+uma receita para o design de programas. A RDP é essa:
+
 1) DEFINIÇÃO DE DADOS:
 Analise o problema, tipicamente escrito em palavras, e:
 
-   a) Identifique a INFORMAÇÃO sobre o mundo que deve ser representada, e defina
+   a) Prepare uma DECLARAÇÃO DE PROPÓSITO, que deve ser um comentário, em poucas
+      linhas, que resume o propósito do programa.
+
+   b) Identifique a INFORMAÇÃO sobre o mundo que deve ser representada, e defina
       como ela será representada pelos DAODS da linguagem de programação
       escolhida. Formula as DEFINIÇÕES DE DADOS que representam o ESTADO DO
       MUNDO. Ex.:
@@ -255,3 +261,12 @@ Com todas as funções prontas, a única coisa que falta é a função MAIN, que
 executará o World Program através de uma expressão big-bang. O primeiro
 argumento, obrigatoriamente, é o ESTADO INICIAL do mundo; o resto dos argumentos
 (render, event handlers, end?) podem ocorrem em qualquer ordem.
+
+Se a RDP (e as RDF necessárias) for seguida, uma grande vantagem surgirá
+"automaticamente": a SEPARAÇÃO entre os DADOS que o programa monitora/utiliza e
+a VISÃO que o usuário têm do mundo. Essa separação é fundamental para garantir a
+facilidade de atualização/modificação futura do programa.
+
+
+3.7) Virtual Pets Worlds:
+-------------------------
