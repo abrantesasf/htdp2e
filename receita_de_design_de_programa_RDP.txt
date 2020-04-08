@@ -1,0 +1,76 @@
+;;============================================================================;;
+;; How to Design Programs, 2ª edição                                          ;;
+;; https://htdp.org                                                           ;;
+;;----------------------------------------------------------------------------;;
+;; Capítulos: (diversos)                                                      ;;
+;;----------------------------------------------------------------------------;;
+;; Resumo por: Abrantes Araújo Silva Filho                                    ;;
+;;             abrantesasf@gmail.com                                          ;;
+;;============================================================================;;
+
+
+--------------------------------------------------------------------------------
+                    RECEITA DE DESIGN DE PROGRAMA (RDP)
+--------------------------------------------------------------------------------
+1) DEFINIÇÃO DE DADOS:
+Analise o problema, tipicamente escrito em palavras, e:
+
+   a) Prepare uma DECLARAÇÃO DE PROPÓSITO, que deve ser um comentário, em poucas
+      linhas, que resume o propósito do programa.
+
+   b) Identifique a INFORMAÇÃO sobre o mundo que deve ser representada, e defina
+      como ela será representada pelos DAODS da linguagem de programação
+      escolhida. Formula as DEFINIÇÕES DE DADOS que representam o ESTADO DO
+      MUNDO. Ex.:
+         ; Representação: o WordlState é um número
+         ; Interpretação: o número de pixels a partir da borda esquerda
+
+2) PROPRIEDADES CONSTANTES:
+Identifique as PROPRIEDADES DO MUNDO que permanecerão constantes durante o
+tempo,  e que serão necessárias para renderizar o mundo como uma imagem
+(requisito  da BSL). Crie CONSTANTES para cada propriedade, como um breve
+comentário  que explica o que essas constantes significam. Divida as constantes
+em  dois grupos:
+
+   a) CONSTANTES FÍSICAS: atributos gerais dos objetos no mundo
+   
+   b) CONSTANTES GRÁFICAS: são as imagens dos objetos no mundo, criadas
+      utilizando-se as propriedades físicas.
+
+3) PROPRIEDADES QUE VARIAM NO TEMPO:
+Identifique as PROPRIEDADES DO MUNDO que são alteradas em reação aos EVENTOS que
+ocorrerão no mundo, e que se tornarão o ESTADO ATUAL do mundo. Desenvolva uma
+representação de dados para TODOS os possíveis estados do mundo, com suas
+respectivas definições de dados.
+
+4) DESIGN DAS FUNÇÕES NECESSÁRIAS:
+Depois que você tem todas as definições de dados (estados do mundo) prontas, é
+necessário fazer o design de diversas funções (e, para cada, use uma RDF):
+
+   a) RENDER: exibirá o estado atual do mundo ao usuário, com uma imagem.
+   
+   b) EVENT HANDLERS: serão responsável por monitorar a ocorrência de eventos e
+      retornar o PRÓXIMO ESTADO do mundo. Os 3 principais event handlers são:
+         - clock-tick-handler
+         - keystroke-handler
+         - mouse-event-handler
+         
+   c) END?: é a função responsável por decidir se o ESTADO ATUAL do mundo será
+      atualizado para o PRÓXIMO ESTADO e, em caso afirmativo, continuar a
+      execução do programa deixando o render exibir o estado atualizado.
+
+5) FUNÇÃO MAIN:
+Com todas as funções prontas, a única coisa que falta é a função MAIN, que
+executará o World Program através de uma expressão big-bang. O primeiro
+argumento, obrigatoriamente, é o ESTADO INICIAL do mundo; o resto dos argumentos
+(render, event handlers, end?) podem ocorrem em qualquer ordem.
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+                   Orientações Gerais Complementares à RDP
+--------------------------------------------------------------------------------
+a) Coloque as bibliotecas necessárias ao programa (e às funções) no início
+   do programa.
+
+b) Mantenha um ponto único de controle do programa.
